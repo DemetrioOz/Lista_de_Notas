@@ -9,15 +9,13 @@ class ListNotes extends Component {
     return (
       <>
         <ul className="list-notes">
-          {Array.of("Trabalho", "Trabalho", "Estudos").map(
-            (categoria, index) => {
-              return (
-                <li className="list-notes-itens" key={index}>
-                  <CardNote />
-                </li>
-              );
-            }
-          )}
+          {this.props.notes.map((note, index) => {
+            return (
+              <li className="list-notes-itens" key={index}>
+                <CardNote title={note.title} content={note.content} />
+              </li>
+            );
+          })}
         </ul>
       </>
     );
