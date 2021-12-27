@@ -1,11 +1,16 @@
 import React from "react";
 
+import ListNotes from "./components/ListNotes";
+import FormRegister from "./components/FormRegister";
+
+import "./App.css";
+
 function App() {
   return (
-    <form>
-      <input type="text" />
-      <textarea />
-    </form>
+    <section className="content">
+      <FormRegister />
+      <ListNotes />
+    </section>
   );
 }
 
